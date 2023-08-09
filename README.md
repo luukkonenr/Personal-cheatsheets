@@ -1,7 +1,8 @@
 # Personal-cheatsheets
 ## JSONL
-* `jq` for simple jsonl commandline operations such as filtering by label: `cat full-dedup.cleaned.split.filtered.register-labels.jsonl  | jq -c 'select(.register_labels.MT | tonumber > 0.002)' > output.jsonl`
+* `jq` for simple jsonl commandline operations such as filtering by label: `cat full-dedup.cleaned.split.filtered.register-labels.jsonl  | jq -c 'select(.register_labels.MT | tonumber < 0.3)' > output.jsonl`
 
+## bash
 
 # Supercomputers:
 - Puhti: ssh yourname@puhti.csc.fi 
