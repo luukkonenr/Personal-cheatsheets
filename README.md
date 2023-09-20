@@ -14,3 +14,12 @@ singularity shell --writable development_img
 singularity build production.sif development_img/
 ```
 [Docs](https://docs.sylabs.io/guides/3.7/user-guide/build_a_container.html#sandbox)
+
+
+
+## SLURM
+### Dependecy jobs
+Launching a job to execute after previous has finished.
+
+JOBID=$(sbatch my_job.sh | cut -f 4 -d " ")
+sbatch --dependency=$JOBID
